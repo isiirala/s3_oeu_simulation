@@ -1,0 +1,10 @@
+
+
+project Using_Tools_And_Pus is
+   for Externally_Built use "true";
+   for Source_Files use ();
+   for Library_Dir use "..\..\..\ali";
+   for Library_Ali_Dir use "..\..\..\ali\lib_ali";
+   for Library_Name use "Tools_And_Pus";
+   for Library_Kind use "dynamic";
+end Using_Tools_And_Pus;

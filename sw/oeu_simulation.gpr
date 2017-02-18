@@ -1,0 +1,85 @@
+
+
+-- Configure with your location of GTKAda:
+limited with "C:\GNAT\2016\GtkAda\lib\gnat\gtkada.gpr";
+
+
+--limited with "Common\Sw_Components\01__scripts\tools_and_pus.gpr";
+limited with "Common\Sw_Components\01__scripts\Using_Tools_And_Pus.gpr";
+limited with "ICM\lib_onboard_sw\using_icm_rsw_sal.gpr";
+limited with "ICM\lib_onboard_sw\using_icm_opsw_sal.gpr";
+
+
+project Oeu_Simulation is
+
+   for Source_Dirs use (
+-- Common dirs:
+     "Common/simulation/**",
+     "Common/hw_simulation/bus_1553_pus_simu/**",
+     "Common/hw_simulation/epica_simu/**",
+     "Common/sw_components/byte_array_buffer",
+     "Common/sw_components/byte_array_buffer/byte_meta_buffer",
+     "Common/sw_components/cuc_decoder",
+
+-- ICM dirs:
+     "ICM/simulation/**", 
+     "../ali/rsw_sal/lib_src_if",
+
+     "ICM/lib_onboard_sw/lib_if/rsw/rsw_dll_if",
+     -- To import the routines of the interface
+
+     "../ali/opsw_sal/lib_src_if",
+
+     "ICM/lib_onboard_sw/lib_if/opsw/opsw_dll_if",
+     -- To import the routines of the interface
+
+
+-- DPM dirs:
+     "DPM/simulation/**",
+-- PCDM dirs:
+     "PCDM/simulation/**",
+-- SMU dirs:
+     "SMU/simulation/**",
+-- UIF dirs:
+     "user_interface/**");
+
+
+   for Excluded_Source_Dirs use ("user_interface/not_used/**");
+   for Main use ("oeu_simulation.adb");
+
+
+
+
+   package Ide is
+      for Documentation_Dir use "..\doc\oeu_simulation";
+   end Ide;
+   package Builder is
+      for Default_Switches ("ada") use ("-j2"); --, "-g");
+   end Builder;
+
+
+--   package Binder is
+--   end Binder;
+
+
+   for Library_Dir use "..\ali\osu_simulation";
+   for Exec_Dir use "..\bin";
+
+   for Object_Dir use "..\obj\oeu_simulation";
+
+--   package Compiler is
+--      for Default_Switches ("ada") use ("-g");
+--   end Compiler;
+
+   package Binder is
+      for Default_Switches ("Ada") use ("-shared");
+   end Binder;
+
+
+   package Linker is
+      for Required_Switches use ("OeuSimulation_res.o");
+   end Linker;
+
+
+end Oeu_Simulation;
+

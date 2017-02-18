@@ -1,0 +1,26 @@
+1 VERSIONINFO
+FILEVERSION 0,0,1,0
+PRODUCTVERSION 0,0,1,0
+BEGIN
+   BLOCK "StringFileInfo"
+   BEGIN
+        BLOCK "04090000"  /* Lang = US English, Charset = ASCII */
+        BEGIN
+            VALUE "Comments", "Executable program of S3 OEU simulation of Copernicus program\0"
+            VALUE "CompanyName", "GMV Aerospace and Defense\0"
+            VALUE "FileDescription", "OEU Simulation for Windows 7 of 32 bits. Spacecraft SW rehosted to X86\0"
+            VALUE "FileVersion", "0.1.0.0\0"
+            VALUE "InternalName", "oeu_simulation.exe\0"
+            VALUE "LegalCopyright", "(C) 2014-2016, GMV Aerospace and Defense\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "oeu_simulation.exe\0"
+            VALUE "ProductName", "Copernicus S3 OEU SIMULATION\0"
+            VALUE "ProductVersion", "0.1.0.0\0"
+        END
+   END
+   BLOCK "VarFileInfo"
+   BEGIN
+      VALUE "Translation", 0x809, 1252
+   END
+END
+

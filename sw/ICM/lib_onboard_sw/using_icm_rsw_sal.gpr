@@ -1,0 +1,15 @@
+
+
+project Using_Icm_Rsw_Sal is
+   for Externally_Built use "true";
+   for Source_Files use ();
+   for Library_Dir use "..\..\..\ali\rsw_sal\lib";
+   for Library_Ali_Dir use "..\..\..\ali\rsw_sal\lib_ali";
+   for Library_Name use "IcmRswSal";
+   for Library_Kind use "dynamic";
+end Using_Icm_Rsw_Sal;
+
+
+
+
+

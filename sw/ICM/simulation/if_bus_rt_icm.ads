@@ -1,0 +1,11 @@
+
+
+
+package If_Bus_Rt_Icm is
+
+
+--TODO IFTERFAZ DEL RT DE LA OEU, AÑADIR COMO HEREDEROS EL OEU RT NOMINAL Y REDUNDANTE
+
+
+
+end If_Bus_Rt_Icm;
