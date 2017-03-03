@@ -25,4 +25,3 @@ Open oeu_simulation.gpr with GPS application and build it.
 Use example
 ------------
 https://youtu.be/iWNZAoaw4jw
-
